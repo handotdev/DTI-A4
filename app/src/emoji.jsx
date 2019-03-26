@@ -4,14 +4,11 @@ import Emoji from './one-emoji'
 var emoji = require('node-emoji');
 
 class EmojiSearch extends Component {
-  constructor(props){
-  super(props);
 
-  this.state = {
+  state = {
     search : '',
     empty : true
   };
-  }
 
   updateInput(event){
     this.setState({search : event.target.value}, () => {
@@ -36,6 +33,7 @@ class EmojiSearch extends Component {
 
     return (
       <div className="emoji">
+        <h1>Emoji Search Component</h1>
         <input type="text" placeholder="Search Emoji" value={this.state.search} onChange={event => this.updateInput(event)}/>
         {this.search().map(emoji => <Emoji key={emoji.key} name={emoji.key} emoji={emoji.emoji} />)}
         </div>
