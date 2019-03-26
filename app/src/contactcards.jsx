@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ContactCard from './one-card.jsx';
+import ContactCard from './one-card';
 
 export default class ContactCards extends Component {
   render() {

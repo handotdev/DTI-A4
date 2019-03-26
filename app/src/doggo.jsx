@@ -8,12 +8,17 @@ export default class DoggoTranslate extends Component {
   super(props);
 
   this.state = {
-    text : ''
+    text : '',
+    translated : ''
   };
   }
 
   updateInput(event){
-    this.setState({text : event.target.value})
+    this.setState({text : event.target.value});
+  }
+
+  translate(event){
+    this.setState({translated : doggoTranslator.translateSentence(this.state.text, false)});
   }
 
   render() {
@@ -21,8 +26,8 @@ export default class DoggoTranslate extends Component {
     return (
       <div className="doggo">
         <input type="text" placeholder="Translate to Doggo" value={this.state.text} onChange={event => this.updateInput(event)}/>
-        <button onClick={event => this.updateInput(event)}>Translate</button>
-        <p>{doggoTranslator.translateSentence(this.state.text, false)}</p>
+        <button onClick={event => this.translate(event)}>Translate</button>
+        <p>{this.state.translated}</p>
       </div>
     );
   }

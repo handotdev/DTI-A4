@@ -3,14 +3,18 @@ import React, { Component } from 'react';
 export default class BrokenComponent extends Component {
   state = { name: 'Random User' };
 
-  sayHelloToSamInstead() {
+  /*sayHelloToSamInstead() {
     this.state = { name: 'Sam' };
-  }
+  } */
+
+  sayHelloToSamInstead = () => this.setState({ name : 'Sam'});
+  /// SOLUTION: this.setState is the correct methodd to alter the state.
 
   render() {
     const { name } = this.state;
 
     /// BROKEN: Why isn't Sam greeted? Check the example code to see the difference.
+
     /// You can also try to prettify the component, but that's completely optional.
 
     return (

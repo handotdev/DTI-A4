@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import Emoji from './emoji.jsx'
-import Doggo from './doggo.jsx'
-import Pet from './pet.jsx'
-import ContactCards from './contactcards.jsx'
+import Emoji from './emoji'
+import Doggo from './doggo'
+import Pet from './pet'
+import ContactCards from './contactcards'
 
 class App extends Component {
   render() {
