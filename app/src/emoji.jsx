@@ -25,7 +25,11 @@ class EmojiSearch extends Component {
       return [];
     }
     else {
-      return emoji.search(this.state.search);
+      if(emoji.search(this.state.search).length === 0){
+        return [{key: "Invalid search", emoji: ""}];
+      } else {
+        return emoji.search(this.state.search);
+      }
     }
   }
 

@@ -9,7 +9,7 @@ export default class EmojiResult extends Component {
 
       <div className="ContactCard">
         <p>
-          {name + ": " + emoji}
+          {name + " " + emoji}
         </p>
       </div>
     );
